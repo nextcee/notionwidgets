@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+button {
+  background: #fff;
+  border: none;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  width: 180px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transform: skew(-21deg);
+}
+
+span {
+  display: inline-block;
+  transform: skew(21deg);
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  left: 0;
+  background: rgb(20, 20, 20);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+button:hover {
+  color: #fff;
+  background: #0000FF;
+}
+
+button:hover::before {
+  left: 0;
+  right: 0;
+  opacity: 0.25;
+}
+</style>
+</head>
+<body>
+
+<button>
+    <span>For Review</span>
+</button>
+
+<button>
+    <span>Drawing Status</span>
+</button>
+<button>
+    <span>Reminders</span>
+</button>
+<button>
+    <span>Calendar</span>
+</button>
+
+
+</body>
+</html>
